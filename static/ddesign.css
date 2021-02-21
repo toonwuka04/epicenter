@@ -179,6 +179,10 @@
   padding: 10px;
 }
 
+#map-options a {
+  text-decoration: none;
+}
+
 #map-options button:hover {
   cursor: grab;
   background-color: var(--color3);

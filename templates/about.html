@@ -32,7 +32,10 @@
     </nav>
 
     <section>
-      <img src="static\img\wrldmap.jpg" class="image" />
+      <img
+        src="{{ url_for('static', filename='/img/worldmap.webp') }}"
+        class="image"
+      />
       <!-- image here -->
 
       <div class="content">
@@ -58,7 +61,11 @@
           verification process.
         </p>
         <ul class="links">
-          <li><a href="#">Become Verified!</a></li>
+          <li>
+            <a href="https://rvx4c2iv9h4.typeform.com/to/xTAqRSJn"
+              >Become Verified!</a
+            >
+          </li>
           <br />
           <li><a href="#">Donate Items Here!</a></li>
         </ul>

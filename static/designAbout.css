@@ -86,9 +86,14 @@ section {
   margin: 0 auto;
 }
 .image {
-  background: url("static/img/wrldmap.jpg") center/cover no-repeat;
+  position: fixed;
+  right: 0;
+  z-index: -5;
+  top: 15vh;
+  width: 55vw;
 }
 .content {
+  padding-top: 100px;
   background: #4e8a84;
   display: flex;
   justify-content: center;
@@ -120,7 +125,7 @@ section {
   margin: 15px 0;
 }
 .links li {
-  border: 0.5px solid #4b5320;
+  border: 0.5px solid var(--color1);
   list-style: none;
   border-radius: 5px;
   padding: 10px 15px;
@@ -129,8 +134,9 @@ section {
 }
 .links li a {
   text-transform: uppercase;
-  color: #4b5320;
+  color: var(--color1);
   text-decoration: none;
+  width: 100%;
 }
 .links li:hover {
   border-color: #06d6a0;
