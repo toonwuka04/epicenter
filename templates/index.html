@@ -27,6 +27,9 @@
         <li>
           <a href="{{ url_for("about")}}"><p>Our Service</p></a>
         </li>
+        <li>
+          <a href="{{ url_for("gethelp")}}"><p>Help Form</p></a>
+        </li>
       </ul>
     </nav>
     {% block body %}
@@ -41,13 +44,13 @@
           <h3>Help in your community</h3>
         </div>
 
-        <a href="#map-interface" id="scroll-link">
-          <img src="..\static\img\arrowdown.png" />
-        </a>
+        <a href="#map-interface" class="scroll-link" id = "to-map">
+          <img src="../static\img\arrowdown.png">
+      </a>
       </main>
       <!--The end of the map image-->
       <!--The actual map with the buttons-->
-      <script>
+      <!-- <script>
         const gethelp = document.getElementById("gethelp")
         const modal = document.getElementById("modall")
         //const close = document.getElementById()
@@ -60,28 +63,28 @@
           console.log("in function");
           //console.log(document.getElementById('gethelp').value);
           if(document.getElementById('gethelp').clicked == true){
-              // probably link it to a new page but idk what those are atm
-              
-              console.log("in help button")
+            console.log("in get help");
           }
-          else if(document.getElementById('havehelp').clicked){
-              // filler
+          if(document.getElementById('havehelp').clicked){
+            console.log("to help");
           }
           else if(document.getElementById('map').clicked){
               // filler
           }
         }
-      </script>
+      </script> -->
 
       <div id="map-interface">
         <iframe src="/map" id="map-frame"></iframe>
         <div id="map-options">
-          <button id='gethelp' onclick='myClick()' href=".bg-modal">
-            <img src="..\static\img\audience.svg" class="icon" />
-            Get help
+          <a href ="https://rvx4c2iv9h4.typeform.com/to/LNEOzzGK"  >
+            <button>
+              <img src="..\static\img\audience.svg" class="icon">  
+              Request help!
           </button>
+          </a>
           <!--trying the modal-->
-          <div class="bg-modal" id="modall">
+          <!--<div class="bg-modal" id="modall">
           <div class="modal-content">
           <div class="close" id="close">+</div>
               <form>
@@ -92,14 +95,14 @@
               <a href="{{ url_for('index')}}" class="button">Submit</a>
               </form>
           </div>
-          </div>
+          </div>-->
       
           <!--end of trying the modal-->
-          <button id='havehelp' onclick='myClick()'>
+          <button id='haveHelpClick' onclick='myClick()'>
             <img src="..\static\img\placeholder.svg" class="icon" />
-            I have help
+            Volunteer to help
           </button>
-          <button id='map' onclick='myClick()'>
+          <button id='mapClick' onclick='myClick()'>
             <img src="..\static\img\map3.svg" class="icon"/>
             Map: Houston, Texas
           </button>
@@ -111,42 +114,67 @@
         </div>
       </div>
 
+      <a href="#newsfeed-wrapper" class="scroll-link" id="to-news">
+        <img src="../static\img\arrowdown.png">
+      </a>
+
       <!--The end of the map div-->
       <div id="newsfeed-wrapper">
         <p id="newsfeed-fetch">
           {{ news }}  
         </p>
 
-        <div id = "newsfeed">
-          <div id = "art1" class = "news-title">HEJ</div>
-          <img src="" id="img1" class = "news-img">
-          <img src="" id="img2" class = "news-img">
-          <div id = "art2" class = "news-title"></div>
-          
-          <div id = "art3" class = "news-title"></div>
-          <img src="" id="img3" class = "news-img">
-          <img src="" id="img4" class = "news-img">
-          <div id = "art4" class = "news-title"></div>
-          
-
+        <div id="news-info">
+          <h1>Stay updated</h1>
+          <p>The latest news concerning "Texas+weather". Powered by the NewsAPI.</p>
+          <h1><span>&#8594;</span></h1>
         </div>
 
-          <!--newsapi key: 53a218ace3974c7990cad1a004593ee8-->
+      <div id = "newsfeed">
+        <a href="" id = "art1" class = "news-title" onmouseover="hoverIn(0)" onmouseout=hoverOut(0)></a>
+        <img src="" id="img1" class = "news-img">
+        <img src="" id="img2" class = "news-img">
+        <a href="" id = "art2" class = "news-title" onmouseover="hoverIn(1)" onmouseout=hoverOut(1)></a>
+        
+        <a href="" id = "art3" class = "news-title" onmouseover="hoverIn(2)" onmouseout=hoverOut(2)></a>
+        <img src="" id="img3" class = "news-img">
+        <img src="" id="img4" class = "news-img">
+        <a href="" id = "art4" class = "news-title" onmouseover="hoverIn(3)" onmouseout=hoverOut(3)></a>
+        
+
+      </div>
+
+            <!--newsapi key: 53a218ace3974c7990cad1a004593ee8-->
 
       </div>
 
 
 
     </div>
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
+        
       </div>
      
     <script src="..\static\js\navbar.js"></script>
     <script src="..\static\js\newsfeed.js"></script>
+    <script>
+      const gethelp = document.getElementById("gethelp")
+      const modal = document.getElementById("modall")
+      //const close = document.getElementById()
+      // gethelp.addEventListener("click", function() {
+      //   modal.classList.add('show');
+      // })
+
+
+      function getHelpClick(){
+        console.log("in get help");
+      }
+      function haveHelpClick(){
+        console.log("in have help");
+      }
+      function mapClick(){
+        console.log("in map");
+      }
+    </script>
     
 {% endblock %}
 

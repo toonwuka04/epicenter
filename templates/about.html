@@ -7,21 +7,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='ddesign.css')}}"
+      href="{{ url_for('static', filename='design2.css')}}"
       type="text/css"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Document</title>
-  </head>
+  </heection>
+  {% block body %}
+      <div class="image">
+        <!-- image here -->
+      </div>
 
-  <body>
-    <!--its been fixed :D noice-->
-    {% block body%} {% endblock %}
-    <header>
-      <section>
-        <div><h1>HELLO WORLD? WORKING!</h1></div>
-      </section>
-    </header>
+      <div class="content">
+        <h2>About Us</h2>
+        <span><!-- hehe --></span>
+
+        <p>
+          At Epicenter we connect those with help to provide to those who need
+          it during hard times. Register as a helper in your community, and let
+          the people close to you share what you have in abundance. Do you have
+          access to clean water, an extra bed, or some outgrown clothes? Share
+          it on Epicenter!
+        </p>
+        <br />
+        <h2>Verified Helpers</h2>
+
+        <span> <!--helu--></span>
+        <p>
+          To ensure the legitimacy of helpers we use a verification system.
+          Newly registered helpers sends us proof of their identity and ability
+          to help, and we verify them as soon as possible. We allow people to
+          register as helpers either way, but we encourage you to go through the
+          verification process.
+        </p>
+        <ul class="links">
+          <li><a href="#">Become Verified!</a></li>
+          <br />
+          <li><a href="#">Donate Items Here!</a></li>
+        </ul>
+
+        <ul class="icons">
+          <li>
+            <i class="fa fa-github"></i>
+          </li>
+        </ul>
+      </div>
+    </section>
+    {% endblock %}
   </body>
 </html>

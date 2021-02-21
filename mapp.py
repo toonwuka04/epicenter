@@ -4,13 +4,13 @@ import requests, json
 
 url = ('http://newsapi.org/v2/everything?'
        'q=texas&weather'
-       'from=2021-02-21&'
+       'from=2021-02-18&'
        'sortBy=popularity&'
        'apiKey=53a218ace3974c7990cad1a004593ee8')
 
 news_response = requests.get(url)
 news_json = news_response.json()
-news = news_json["articles"]
+news = news_json["articles"][:15]
 
 news_passed = ""
 for article in news:
@@ -30,6 +30,14 @@ def index():
     folium.Marker(location=["30.293440", "-97.727371"], popup="Russell Lee Elementary School (Warm up)", icon=folium.Icon(color="green"),).add_to(map1)
     folium.Marker(location=["30.735880", "-95.582910"], popup="Walker County Shelter", icon=folium.Icon(color="green"),).add_to(map1)
     folium.Marker(location=["29.961850", "-95.373870"], popup="National Association of Christian Churches", icon=folium.Icon(color="green"),).add_to(map1)
+    folium.Marker(location=["30.400336", "-95.70874"], popup="Montgomery County Lone Star Community Center", icon=folium.Icon(color="green"),).add_to(map1)
+    folium.Marker(location=["30.2221109", "-95.7267013"], popup="Wildwood UMC Warming Center", icon=folium.Icon(color="green"),).add_to(map1)
+    folium.Marker(location=["32.9631139", "-96.726821"], popup="First Baptist Richardson", icon=folium.Icon(color="green"),).add_to(map1)
+    folium.Marker(location=["30.3978111", "-95.6134237"], popup="Madeley Ranch Elementry", icon=folium.Icon(color="green"),).add_to(map1)
+    folium.Marker(location=["29.4205326", "-98.4836466"], popup="Henry B. Gonzalez Convention Center", icon=folium.Icon(color="green"),).add_to(map1)
+    folium.Marker(location=["31.8573755", "-102.3447222"], popup="St. Elizabeth Ann Seaton Catholic Parish Gym", icon=folium.Icon(color="green"),).add_to(map1)
+    folium.Marker(location=["31.847566", "-102.36907"], popup="Copper Rose Building Warming Center", icon=folium.Icon(color="green"),).add_to(map1)
+    
     map1.save("templates/map.html") 
     return render_template("index.html", map=map1, news=news_passed)
 
@@ -42,3 +50,6 @@ def map():
 def about():
     return render_template('about.html')
 
+@app.route('/gethelp')
+def gethelp():
+    return render_template('helpform.html')

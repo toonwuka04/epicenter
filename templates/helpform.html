@@ -1,21 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='ddesign.css')}}"
-      type="text/css"
-    />
-    <script src="..\static\js\myScript.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css"/>
 
-    <title>Document</title>
-  </head>
+{% extends 'index.html'%}
 
-  <body>
-    <div id""lpform">"
-    <h1>HELLO</h1>    </div>
-  </body>
-</html>
+{% block body%} 
+<div class="bg-modal" id="modall">
+          <div class="modal-content">
+          <div class="close" id="close">+</div>
+              <form >
+              <input type="text" name="name" placeholder="Your name" required></input>
+              <input type="email" name="address" placeholder="Your email" required></input>
+              <input type="text" name="latitude" placeholder="Latitude of address" required></input>
+              <input type="text" name="longitude" placeholder="Longitude of address" required></input>
+              <div class="">
+                <label class="radio">
+                  <li style="text-decoration: none; list-style: none; margin: 10px; cursor: pointer;"><input type="radio" name="answer" value="Food/Water">Food/Water</li>
+                </label>
+                <label class="radio">
+                  <li style="text-decoration: none; list-style: none; margin: 10px; cursor: pointer;"><input type="radio" name="answer" value="Shelter">Shelter</li>
+                </label>
+                <label class="radio">
+                  <li style="text-decoration: none; list-style: none; margin: 10px; cursor: pointer;"><input type="radio" name="answer" value="Donations">Donations</li>
+                </label>
+                <label class="radio">
+                  <li style="text-decoration: none; list-style: none; margin: 10px; cursor: pointer;"><input type="radio" name="answer" value="Services">Services<li>
+                </label>
+        </div>
+              <a href="{{ url_for('index')}}" class="button">Submit</a>
+              </form>
+          </div>
+          </div>
+
+{% endblock %}
