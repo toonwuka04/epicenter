@@ -30,4 +30,5 @@ set FLASK_ENV=development
 flask run
 ```
 
-# A url should pop up in the terminal, go ahead and click on it!
+9. A url should pop up in the terminal, go ahead and click on it!
+10. Still confused? Head to the professionals: https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository
