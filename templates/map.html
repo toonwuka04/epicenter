@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_de9bb37987de428c9bf29bd9242a682b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_de9bb37987de428c9bf29bd9242a682b" ></div>
+        
+</body>
+<script>    
+    
+            var map_de9bb37987de428c9bf29bd9242a682b = L.map(
+                "map_de9bb37987de428c9bf29bd9242a682b",
+                {
+                    center: [29.7604, -95.3698],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2eb90d75084a4ca08fc48cd47d588489 = L.tileLayer(
+                "https://api.mapbox.com/styles/v1/xdonaldduckftwx/cklf0uw4d35zq17med1sur2wa/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoieGRvbmFsZGR1Y2tmdHd4IiwiYSI6ImNrbGYwc2p3ajFlYTUyb3M0czJ1ODF2aXIifQ.9st5K9vntIAZ_nK1JnbbfA",
+                {"attribution": "Navigation Mapbox Attribution", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_de9bb37987de428c9bf29bd9242a682b);
+        
+    
+            var marker_a84f2cc5bbd14e649ff574aaf09f9d2e = L.marker(
+                [32.9791, -96.8922],
+                {}
+            ).addTo(map_de9bb37987de428c9bf29bd9242a682b);
+        
+    
+            var icon_7866d37afe8e4f0f83ffa9f23a8b0da2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_a84f2cc5bbd14e649ff574aaf09f9d2e.setIcon(icon_7866d37afe8e4f0f83ffa9f23a8b0da2);
+        
+    
+        var popup_65f903fe926b4ac293698a7e5f0fcdeb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_008016f1906241769161148d64a4900c = $(`<div id="html_008016f1906241769161148d64a4900c" style="width: 100.0%; height: 100.0%;">Newman Smith High School Center</div>`)[0];
+            popup_65f903fe926b4ac293698a7e5f0fcdeb.setContent(html_008016f1906241769161148d64a4900c);
+        
+
+        marker_a84f2cc5bbd14e649ff574aaf09f9d2e.bindPopup(popup_65f903fe926b4ac293698a7e5f0fcdeb)
+        ;
+
+        
+    
+    
+            var marker_5dc77c8af29b4bda85c9ee393e4e6ed7 = L.marker(
+                [30.28418, -97.73643],
+                {}
+            ).addTo(map_de9bb37987de428c9bf29bd9242a682b);
+        
+    
+            var icon_91b73ed0753c448da60e6ee1e1c70a7e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5dc77c8af29b4bda85c9ee393e4e6ed7.setIcon(icon_91b73ed0753c448da60e6ee1e1c70a7e);
+        
+    
+        var popup_3374aa092b4c4befabaa6ac8fa3c867f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_18739e7d4be548c59313b5b20421c0cb = $(`<div id="html_18739e7d4be548c59313b5b20421c0cb" style="width: 100.0%; height: 100.0%;">Gregory Gymnasium Warming Center</div>`)[0];
+            popup_3374aa092b4c4befabaa6ac8fa3c867f.setContent(html_18739e7d4be548c59313b5b20421c0cb);
+        
+
+        marker_5dc77c8af29b4bda85c9ee393e4e6ed7.bindPopup(popup_3374aa092b4c4befabaa6ac8fa3c867f)
+        ;
+
+        
+    
+    
+            var marker_bd20196b62254ec7a4cda6b8afa12985 = L.marker(
+                [30.29344, -97.727371],
+                {}
+            ).addTo(map_de9bb37987de428c9bf29bd9242a682b);
+        
+    
+            var icon_8cd75e3eca3b43d08da390cd92907631 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_bd20196b62254ec7a4cda6b8afa12985.setIcon(icon_8cd75e3eca3b43d08da390cd92907631);
+        
+    
+        var popup_d97ccd5452cc424da4d5981b4a6d50a2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_53b5dbc7994545f4999ee3d4eb629838 = $(`<div id="html_53b5dbc7994545f4999ee3d4eb629838" style="width: 100.0%; height: 100.0%;">Russell Lee Elementary School (Warm up)</div>`)[0];
+            popup_d97ccd5452cc424da4d5981b4a6d50a2.setContent(html_53b5dbc7994545f4999ee3d4eb629838);
+        
+
+        marker_bd20196b62254ec7a4cda6b8afa12985.bindPopup(popup_d97ccd5452cc424da4d5981b4a6d50a2)
+        ;
+
+        
+    
+    
+            var marker_b4c82d86f4474e8b9f28275b6c53aa49 = L.marker(
+                [30.73588, -95.58291],
+                {}
+            ).addTo(map_de9bb37987de428c9bf29bd9242a682b);
+        
+    
+            var icon_83be54a21106490a92fac16b2cc1ef2b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b4c82d86f4474e8b9f28275b6c53aa49.setIcon(icon_83be54a21106490a92fac16b2cc1ef2b);
+        
+    
+        var popup_23566d2afd3e4d60beaf93ec55c50f0b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a05d16c0494d4582bb88a71c7756b7f6 = $(`<div id="html_a05d16c0494d4582bb88a71c7756b7f6" style="width: 100.0%; height: 100.0%;">Walker County Shelter</div>`)[0];
+            popup_23566d2afd3e4d60beaf93ec55c50f0b.setContent(html_a05d16c0494d4582bb88a71c7756b7f6);
+        
+
+        marker_b4c82d86f4474e8b9f28275b6c53aa49.bindPopup(popup_23566d2afd3e4d60beaf93ec55c50f0b)
+        ;
+
+        
+    
+    
+            var marker_2f65476e51864ab68f3094a677d22f87 = L.marker(
+                [29.96185, -95.37387],
+                {}
+            ).addTo(map_de9bb37987de428c9bf29bd9242a682b);
+        
+    
+            var icon_3baa08ac77504bdea16a6cb1d0d9823e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_2f65476e51864ab68f3094a677d22f87.setIcon(icon_3baa08ac77504bdea16a6cb1d0d9823e);
+        
+    
+        var popup_1529ab7d425b438e937161afbf2af429 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_874c44afaad9406eb415da9d88712b11 = $(`<div id="html_874c44afaad9406eb415da9d88712b11" style="width: 100.0%; height: 100.0%;">National Association of Christian Churches</div>`)[0];
+            popup_1529ab7d425b438e937161afbf2af429.setContent(html_874c44afaad9406eb415da9d88712b11);
+        
+
+        marker_2f65476e51864ab68f3094a677d22f87.bindPopup(popup_1529ab7d425b438e937161afbf2af429)
+        ;
+
+        
+    
+</script>

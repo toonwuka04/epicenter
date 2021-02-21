@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='ddesign.css')}}"
+      type="text/css"
+    />
+    <!--<script src="../static/js/myScript.js"></script>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id='home'>
+    <nav id="navbar">
+      <ul>
+        <li id="page-name-li">
+          <p id="page-name">EPICENTER</p>
+        </li>
+
+        <li>
+          <a href="{{ url_for("index")}}"><p>Helper Map</p></a>
+        </li>
+        <li>
+          <a href="{{ url_for("about")}}"><p>Our Service</p></a>
+        </li>
+      </ul>
+    </nav>
+    {% block body %}
+
+    <div id="grid-wrapper">
+      <!--The map image with text over it-->
+      <main id="landing-page">
+        <img src="..\static\img\map2.jpg" />
+
+        <div id="landing-text">
+          <h1>EPICENTER</h1>
+          <h3>Help in your community</h3>
+        </div>
+
+        <a href="#map-interface" id="scroll-link">
+          <img src="..\static\img\arrowdown.png" />
+        </a>
+      </main>
+      <!--The end of the map image-->
+      <!--The actual map with the buttons-->
+      <script>
+        const gethelp = document.getElementById("gethelp")
+        const modal = document.getElementById("modall")
+        //const close = document.getElementById()
+        // gethelp.addEventListener("click", function() {
+        //   modal.classList.add('show');
+        // })
+
+
+        function myClick(){
+          console.log("in function");
+          //console.log(document.getElementById('gethelp').value);
+          if(document.getElementById('gethelp').clicked == true){
+              // probably link it to a new page but idk what those are atm
+              
+              console.log("in help button")
+          }
+          else if(document.getElementById('havehelp').clicked){
+              // filler
+          }
+          else if(document.getElementById('map').clicked){
+              // filler
+          }
+        }
+      </script>
+
+      <div id="map-interface">
+        <iframe src="/map" id="map-frame"></iframe>
+        <div id="map-options">
+          <button id='gethelp' onclick='myClick()' href=".bg-modal">
+            <img src="..\static\img\audience.svg" class="icon" />
+            Get help
+          </button>
+          <!--trying the modal-->
+          <div class="bg-modal" id="modall">
+          <div class="modal-content">
+          <div class="close" id="close">+</div>
+              <form>
+              <input type="text" name="name" placeholder="Your name"></input>
+              <input type="text" name="address" placeholder="Your email"></input>
+              <input type="text" name="latitude" placeholder="Latitude of address"></input>
+              <input type="text" name="longitude" placeholder="Longitude of address"></input>
+              <a href="{{ url_for('index')}}" class="button">Submit</a>
+              </form>
+          </div>
+          </div>
+      
+          <!--end of trying the modal-->
+          <button id='havehelp' onclick='myClick()'>
+            <img src="..\static\img\placeholder.svg" class="icon" />
+            I have help
+          </button>
+          <button id='map' onclick='myClick()'>
+            <img src="..\static\img\map3.svg" class="icon"/>
+            Map: Houston, Texas
+          </button>
+          <!-- <script>
+            function onclick(){
+
+            }
+          </script> -->
+        </div>
+      </div>
+
+      <!--The end of the map div-->
+      <div id="newsfeed-wrapper">
+        <p id="newsfeed-fetch">
+          {{ news }}  
+        </p>
+
+        <div id = "newsfeed">
+          <div id = "art1" class = "news-title">HEJ</div>
+          <img src="" id="img1" class = "news-img">
+          <img src="" id="img2" class = "news-img">
+          <div id = "art2" class = "news-title"></div>
+          
+          <div id = "art3" class = "news-title"></div>
+          <img src="" id="img3" class = "news-img">
+          <img src="" id="img4" class = "news-img">
+          <div id = "art4" class = "news-title"></div>
+          
+
+        </div>
+
+          <!--newsapi key: 53a218ace3974c7990cad1a004593ee8-->
+
+      </div>
+
+
+
+    </div>
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+     
+    <script src="..\static\js\navbar.js"></script>
+    <script src="..\static\js\newsfeed.js"></script>
+    
+{% endblock %}
+
+  </div>
+  </body>
+</html>
+
