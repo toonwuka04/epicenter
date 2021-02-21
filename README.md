@@ -18,14 +18,14 @@ The type the following:
 
 On Mac:
 ```
-export FLASK_APP=app.py
+export FLASK_APP=mapp.py
 export FLASK_ENV=development
 flask run
 ```
 
 On Windows:
 ```
-set FLASK_APP=app.py
+set FLASK_APP=mapp.py
 set FLASK_ENV=development
 flask run
 ```
