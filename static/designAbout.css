@@ -4,6 +4,72 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  --color1: #222222;
+  --color2: #eeeeee;
+  --color3: #c7d8c6;
+  --color4: #018779;
+}
+#navbar {
+  z-index: 100;
+  margin: 2px 2.5%;
+  position: fixed;
+  background: none;
+  width: 95%;
+  height: 60px;
+  color: var(--color4);
+  border-radius: 20px;
+  border: solid;
+  border-width: 2px;
+  border-color: var(--color3);
+}
+
+#navbar ul {
+  border-radius: 20px;
+  margin: 20px;
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--color1);
+}
+
+#navbar ul li {
+  margin: 0;
+  height: 100%;
+  background: none;
+}
+
+#navbar ul li:hover a {
+  transition: background 0.3s;
+  background: var(--color4);
+  color: var(--color1);
+}
+
+#navbar #page-name-li {
+  display: flex;
+  align-items: center;
+}
+#navbar #page-name {
+  margin-right: 40vw;
+  font-size: 30px;
+}
+
+#navbar p {
+  background: none;
+  font-size: 22px;
+}
+
+#navbar a {
+  background: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color4);
 }
 body {
   font-family: "Noto Sans", sans-serif;
@@ -20,7 +86,7 @@ section {
   margin: 0 auto;
 }
 .image {
-  background: url("wrldmap.jpg") center/cover no-repeat;
+  background: url("static/img/wrldmap.jpg") center/cover no-repeat;
 }
 .content {
   background: #4e8a84;

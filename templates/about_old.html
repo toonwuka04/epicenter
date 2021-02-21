@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,10 +9,23 @@
       href="{{ url_for('static', filename='designAbout.css') }}"
       type="text/css"
     />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='ddesign.css')}}"
+      type="text/css"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+
+      
     <title>Epicenter</title>
   </head>
-
+  <body>
+    <nav id="navbar" style = "height:100vh;">
+      
+    <title>Epicenter</title>
+  </head>
   <body>
     <nav id="navbar">
       <ul>
@@ -20,20 +34,20 @@
         </li>
 
         <li>
-          <a href="{{ url_for('index')}}"><p>Helper Map</p></a>
+          <a href="{{ url_for("index")}}"><p>Helper Map</p></a>
         </li>
         <li>
-          <a href="{{ url_for('about')}}"><p>Our Service</p></a>
+          <a href="{{ url_for("about")}}"><p>Our Service</p></a>
         </li>
         <li>
-          <a href="{{ url_for('gethelp')}}"><p>Help Form</p></a>
+          <a href="{{ url_for("gethelp")}}"><p>Help Form</p></a>
         </li>
       </ul>
     </nav>
 
-    <section>
-      <img src="static\img\wrldmap.jpg" class="image" />
-      <!-- image here -->
+      <div class="image">
+        <!-- image here -->
+      </div>
 
       <div class="content">
         <h2>About Us</h2>
@@ -70,5 +84,6 @@
         </ul>
       </div>
     </section>
-  </body>
-</html>
+     </body>
+  
+ 
