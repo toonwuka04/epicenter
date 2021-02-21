@@ -13,7 +13,7 @@ Natural disasters often devastate the communities that are struck by them. After
 7. Make sure you are in the \epicenter directory and run the following commands in your terminal:
 8. Type ```pip install flask```
 
-The type the following:
+Then type the following:
 
 
 On Mac:
